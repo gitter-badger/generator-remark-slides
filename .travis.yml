@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-remark-slides' ]; then cd .. && eval "mv $currentfolder generator-remark-slides" && cd generator-remark-slides; fi
+
