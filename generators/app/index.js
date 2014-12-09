@@ -54,14 +54,24 @@ var RemarkSlides = yeoman.generators.Base.extend({
         projectName: this.projectName,
         projectAuthor: this.projectAuthor,
       };
-      this.template('_package.json', 'package.json', context);
-      this.template('_slideware.md', 'slideware.md');
+      var files = { 
+        '_package.json': 'package.json',
+        '_slideware.md': 'slideware.md'
+      };
+      for (var source in files) {
+        this.template(source, files[source], context);
+      }
     },
 
     projectfiles: function () {
-      this.src.copy('_Gruntfile.js', 'Gruntfile.js');
-      this.src.copy('_slideware.tmpl', 'slideware.tmpl');
-      this.src.copy('_slideware.css', 'slideware.css');
+      var files = { 
+        '_Gruntfile.js': 'Gruntfile.js',
+        '_slideware.tmpl': 'slideware.tmpl',
+        '_slideware.css': 'slideware.css'
+      };
+      for (var source in files) {
+        this.src.copy(source, files[source]);
+      }
     }
   },
 
