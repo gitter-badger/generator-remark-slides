@@ -8,9 +8,8 @@ var os = require('os');
 
 describe('remark-slides:app', function () {
   before(function (done) {
-    helpers.run(path.join(__dirname, '../app'))
+    helpers.run(path.join(__dirname, '../generators/app'))
       .inDir(path.join(os.tmpdir(), './temp-test'))
-      .withOptions({ 'skip-install': true })
       .withPrompt({
         someOption: true
       })
@@ -19,10 +18,11 @@ describe('remark-slides:app', function () {
 
   it('creates files', function () {
     assert.file([
-      'bower.json',
+      'Gruntfile.js',
       'package.json',
-      '.editorconfig',
-      '.jshintrc'
+      'slideware.md',
+      'slideware.css',
+      'slideware.tmpl'
     ]);
   });
 });

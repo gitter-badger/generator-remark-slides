@@ -1,0 +1,18 @@
+{
+  "name": "<%= projectName %>",
+  "version": "0.0.0",
+  "description": "<%= projectDescription %>",
+  "author": "<%= projectAuthor %>",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-replace": "^0.8.0",
+    "remark": "^0.1.0"
+  },
+  "slideware": {
+    "markdown": "slideware.md",
+    "css": "slideware.css",
+    "template": "slideware.tmpl",
+    "result": "dist/index.html"
+  }
+}

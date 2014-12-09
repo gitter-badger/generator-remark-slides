@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@@title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+@@css
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+@@markdown
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+      var slideshow = remark.create({
+        highlightStyle: 'solarized_dark'
+      });
+      // extract the embedded styling from ansi spans
+      $('code.terminal > span.hljs-ansi').replaceWith(function(i, x) {
+        return x.replace(/&lt;(\/?(\w+).*?)&gt;/g, '<$1>')
+      });
+    </script>
+  </body>
+</html>
