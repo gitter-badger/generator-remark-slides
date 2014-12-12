@@ -1,5 +1,7 @@
 # generator-remark-slides [![Build Status](https://secure.travis-ci.org/rasjani/generator-remark-slides.png?branch=master)](https://travis-ci.org/rasjani/generator-remark-slides)
 
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/rasjani/generator-remark-slides?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Remark Slides generator creates a fully working skeleton of creating
 slideshows that run in webbrowser by editing just a markdown formatted file.
 
